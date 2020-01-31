@@ -1,0 +1,33 @@
+<div class="loginFormContainer">
+  <form class="example-form" (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <mat-form-field class="example-full-width">
+      <input
+        name="email"
+        type="email"
+        matInput
+        [placeholder]="emailPlaceholder"
+        required
+        ngModel
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        name="password"
+        type="password"
+        matInput
+        [placeholder]="passwordPlaceholder"
+        required
+        ngModel
+      />
+    </mat-form-field>
+    <div class="errorMessage">{{ errorMessage }}</div>
+    <button
+      [disabled]="form.invalid"
+      type="submit"
+      class="loginButton"
+      mat-button
+    >
+      Log In
+    </button>
+  </form>
+</div>

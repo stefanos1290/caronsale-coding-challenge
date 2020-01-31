@@ -1,0 +1,37 @@
+.imagesContainer {
+  display: grid;
+  grid-template-columns: 205px 205px;
+  grid-template-rows: 155px 155px;
+}
+.img1 {
+  grid-column-start: 0;
+}
+.img2 {
+  grid-column-start: 1;
+}
+.img3 {
+  grid-row-start: 1;
+}
+.img4 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+.container {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: space-evenly;
+}
+.labelMileAge {
+  display: flex;
+  justify-content: space-between;
+}
+.fuelTransmission {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  font-size: 35px;
+  color: #6739b7;
+}

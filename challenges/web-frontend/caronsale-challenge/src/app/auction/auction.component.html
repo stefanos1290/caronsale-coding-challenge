@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="error" *ngIf="errorMessage">
+    Something went wrong try again later!
+  </div>
+  <div *ngFor="let i of items">
+    <mat-card class="card"
+      ><div class="labelMileAge">
+        <div>{{ i.label }}</div>
+        <div>{{ i.associatedVehicle.mileageInKm }} km</div>
+      </div>
+      <div class="fuelTransmission">
+        <div>Fuel Type: {{ i.associatedVehicle.fuelType }}</div>
+        <div>Transmission: {{ i.associatedVehicle.transmission }}</div>
+      </div>
+      <div>Remaining Time: {{ i.remainingTime }}</div>
+      <div>current highest bid value: €{{ i.currentHighestBidValue }}</div>
+      <div class="imagesContainer">
+        <img
+          class="img1"
+          src="{{ i.associatedVehicle.imageUrls.leftSide.url }}"
+          alt="{{ i.label }}"
+          width="200px"
+          height="150px"
+        />
+        <img
+          class="img2"
+          src="{{ i.associatedVehicle.imageUrls.leftSideBack.url }}"
+          alt="{{ i.label }}"
+          width="200px"
+          height="150px"
+        />
+        <img
+          class="img3"
+          src="{{ i.associatedVehicle.imageUrls.rightSide.url }}"
+          alt="{{ i.label }}"
+          width="200px"
+          height="150px"
+        />
+        <img
+          class="img4"
+          src="{{ i.associatedVehicle.imageUrls.interior.url }}"
+          alt="{{ i.label }}"
+          width="200px"
+          height="150px"
+        />
+      </div>
+    </mat-card>
+  </div>
+</div>
